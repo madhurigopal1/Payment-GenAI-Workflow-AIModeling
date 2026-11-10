@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  payment-genai:
+    build: .
+    container_name: payment-genai-workflow
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
